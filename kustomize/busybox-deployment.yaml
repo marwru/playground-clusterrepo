@@ -21,4 +21,4 @@ spec:
             - "3600"
           env:
             - name: GITOPS
-              value "true"
+              value: "true"
