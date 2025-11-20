@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: busybox-deployment
+  namespace: markowruck
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: busybox-deployment-app
+  template:
+    metadata:
+      matchLabels:
+        app: busybox-deployment-app
+    spec:
+      containers:
+        - name: busybox
+          image: busybox
+          command:
+            - sleep
+            - "3600"
+          env:
+            - name: GITOPS
+              value "true"
