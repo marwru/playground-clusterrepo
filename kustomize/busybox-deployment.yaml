@@ -10,7 +10,7 @@ spec:
       app: busybox-deployment-app
   template:
     metadata:
-      matchLabels:
+      labels:
         app: busybox-deployment-app
     spec:
       containers:
