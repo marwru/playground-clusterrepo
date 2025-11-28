@@ -2,7 +2,7 @@ apiVersion: metallb.io/v1beta1
 kind: IPAddressPool
 metadata:
   name: my-ip-pool
-  namespace: markowruck
+  namespace: metallb-system
 spec:
   addresses:
   - 192.168.100.0/24
@@ -11,7 +11,7 @@ apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
 metadata:
   name: my-l2advertisement
-  namespace: markowruck
+  namespace: metallb-system
 spec:
   ipAddressPools:
   - my-ip-pool
